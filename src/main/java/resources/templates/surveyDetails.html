@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anket Detayları</title>
+</head>
+<body>
+
+    <h1>Anket Detayları</h1>
+    
+    <div th:if="${survey != null}">
+        <p>Anket Başlığı: <span th:text="${survey.title}"></span></p>
+        <p>Oluşturan: <span th:text="${survey.creatorName}"></span></p>
+    </div>
+    <div th:if="${survey == null}">
+        <p>Belirtilen ID'ye sahip anket bulunamadı.</p>
+    </div>
+
+</body>
+</html>

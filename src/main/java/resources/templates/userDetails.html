@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Detayları</title>
+</head>
+<body>
+
+    <h1>Kullanıcı Detayları</h1>
+    
+    <div th:if="${user != null}">
+        <p>Kullanıcı Adı: <span th:text="${user.username}"></span></p>
+        <p>E-posta: <span th:text="${user.email}"></span></p>
+    </div>
+    <div th:if="${user == null}">
+        <p>Belirtilen ID'ye sahip kullanıcı bulunamadı.</p>
+    </div>
+
+</body>
+</html>
